@@ -1,5 +1,5 @@
 FROM ubuntu:14.04
-MAINTAINER Arcus "http://arcus.io"
+MAINTAINER Keisuke Kawahara <kyohsuke@conafie.jp>
 RUN apt-get install -y git-core
 RUN echo "deb http://archive.ubuntu.com/ubuntu trusty main universe multiverse" > /etc/apt/sources.list
 RUN apt-get update
