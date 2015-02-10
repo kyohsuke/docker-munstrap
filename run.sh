@@ -14,6 +14,18 @@ do
 EOF
 done
 
+if [[ -v CAPTURE_HOST ]]
+then
+  NAME="host.docker"
+  HOST=`netstat -nr | grep '^0\.0\.0\.0' | awk '{print $2}'`
+  cat << EOF >> /etc/munin/munin.conf
+[$NAME]
+    address $HOST
+    use_node_name yes
+
+EOF
+fi
+
 # placeholder html to prevent permission error
 cat << EOF > /var/cache/munin/www/index.html
 <html>
