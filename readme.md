@@ -1,4 +1,5 @@
 # Munin master with munstrap
+[![Docker Repository on Quay.io](https://quay.io/repository/kyohsuke/docker-munstrap/status "Docker Repository on Quay.io")](https://quay.io/repository/kyohsuke/docker-munstrap)
 
 It based on 
 - [docker-munin yacchin fork](https://github.com/yacchin1205/docker-munin)
