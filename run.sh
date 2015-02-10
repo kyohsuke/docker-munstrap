@@ -37,6 +37,8 @@ Munin has not run yet.  Please try again in a few moments.
 </body>
 </html>
 EOF
+mkdir -p /var/lib/munin
+chown munin:munin /var/lib/munin
 chown munin:munin /var/cache/munin/www/index.html
 
 # start cron
