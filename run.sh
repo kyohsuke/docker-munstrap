@@ -42,7 +42,7 @@ chown munin:munin /var/lib/munin
 chown munin:munin /var/cache/munin/www/index.html
 
 mkdir -p /var/lib/munin/cgi-tmp
-chowm munin:www-data /var/lib/munin/cgi-tmp
+chown munin:www-data /var/lib/munin/cgi-tmp
 chmod 775 /var/lib/munin/cgi-tmp
 
 # start cron
