@@ -25,6 +25,12 @@ RUN cd /etc/munin &&\
     cp -rb munstrap/static . &&\
     rm -rf ./munstrap
 
+# adding spawn-fcgi
+RUN RUNLEVEL=1 DEBIAN_FRONTEND=noninteractive apt-get install -y spawn-fcgi &&\
+    apt-get -qq -y clean &&\
+    apt-get -qq -y autoclean &&\
+    apt-get -qq -y autoremove
+
 # Finalize
 ADD run.sh /usr/local/bin/run
 VOLUME /var/lib/munin
