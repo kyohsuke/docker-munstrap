@@ -10,7 +10,7 @@ It based on
 docker pull quay.io/kyohsuke/docker-munstrap:latest
 docker run -d -p 80:80 \
 -e CAPTURE_HOST=true \
--e NOEDS="foo.local:127.0.0.1 bar.remote:1.2.3.4" \
+-e NODES="foo.local:127.0.0.1 bar.remote:1.2.3.4" \
 -v /etc/localtime:/etc/localtime:ro \
 -v /var/lib/munin:/var/lib/munin \
 quay.io/kyohsuke/docker-munstrap
@@ -28,7 +28,7 @@ quay.io/kyohsuke/docker-munstrap
 * `NODES`: Space separated list of `<name>:<host>` munin node pairs. (i.e. `foo.local:127.0.0.1 bar.remote:1.2.3.4`)  
   
 example)  
-`docker run -d -p 80:80 -e NOEDS="foo.local:127.0.0.1 bar.remote:1.2.3.4" quay.io/kyohsuke/docker-munstrap` 
+`docker run -d -p 80:80 -e NODES="foo.local:127.0.0.1 bar.remote:1.2.3.4" quay.io/kyohsuke/docker-munstrap` 
 
 # sync timezone host<->guest
 mount /etc/localtime with Readonly  
